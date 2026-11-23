@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchiveSorter — Support</title>
+  <style>
+    :root {
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #0066cc;
+      --bg: #ffffff;
+      --border: #e5e5ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f5f5f7;
+        --muted: #a1a1a6;
+        --accent: #64a8ff;
+        --bg: #1d1d1f;
+        --border: #38383a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Helvetica Neue", Arial, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 2.25rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin: 0.75rem 0; }
+    ul { padding-left: 1.25rem; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    details {
+      margin: 0.75rem 0;
+      padding: 0.75rem 1rem;
+      background: var(--border);
+      border-radius: 10px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+    details p { margin: 0.5rem 0 0; }
+    .highlight {
+      background: var(--border);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .lang-switch button {
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .lang { display: none; }
+    .lang.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button onclick="setLang('en')" id="btn-en" class="active">English</button>
+    <button onclick="setLang('de')" id="btn-de">Deutsch</button>
+    <button onclick="setLang('fr')" id="btn-fr">Fran&ccedil;ais</button>
+  </div>
+
+  <!-- ==================== ENGLISH ==================== -->
+  <div class="lang active" id="lang-en">
+    <h1>Support</h1>
+    <section aria-labelledby="v2-en">
+      <h2 id="v2-en">Version 2.0 and later</h2>
+      <details>
+        <summary>Which models do I need?</summary>
+        <p>On an iPhone or iPad with at least 6 GB of RAM, choose Download during setup or under Settings → AI model. Apple delivers OvisOCR2 and Qwen 3.5 4B through Apple-Hosted Background Assets. The download is about 4 GB. It carries model files and does not send your documents, recognized text, or questions to Apple or the developer. After downloading, the models work offline. Version 2.0 does not use Apple Foundation Models.</p>
+      </details>
+      <details>
+        <summary>Why is my document waiting for me to choose a folder?</summary>
+        <p>OvisOCR2 reads page images and Qwen 3.5 4B classifies documents and answers questions on your device. A document with more than five pages skips AI reading and classification, even when using an external server. Choose its folder in Review.</p>
+      </details>
+      <details>
+        <summary>Can I use my own computer for processing?</summary>
+        <p>Under Settings → AI model, you can connect your own model server on your local network. Once you confirm the connection, the app sends the page images, recognized text, and questions needed for processing to that server. This is also an option on devices with less than 6 GB of RAM.</p>
+      </details>
+      <details>
+        <summary>Where are my library and backups stored?</summary>
+        <p>Choose a device folder to keep the library local. If you choose a cloud folder in Files instead, its provider stores and syncs the library. You can save a backup in a cloud folder as well. Use Settings → Backup &amp; recovery to create a backup of the library.</p>
+      </details>
+      <details>
+        <summary>Need help?</summary>
+        <p>Email <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a> with the app version, device model, and the step where you need help. Leave private document contents out of your message.</p>
+      </details>
+    </section>
+
+    <h2 id="v1-en">Version 1.0</h2>
+    <div class="meta">ArchiveSorter &middot; Document Management for iPhone &amp; iPad &middot; Updated August 26, 2026</div>
+
+    <div class="highlight">
+      Need help? Send an email to
+      <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+      and you will receive a reply as quickly as possible.
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>How do I get started?</summary>
+      <p>After installing the app, the onboarding guide will walk you through
+      selecting a folder as your document library. This can be a local folder
+      or a cloud-synced folder (iCloud Drive, Dropbox, etc.). Once set up,
+      you can scan or import documents and the app will automatically
+      classify and file them.</p>
+    </details>
+
+    <details>
+      <summary>Which devices are supported?</summary>
+      <p>ArchiveSorter requires iOS/iPadOS 26.0 or later and a device
+      that supports Apple Intelligence. This includes iPhone 15 Pro,
+      iPhone 15 Pro Max, and all later iPhone models, as well as
+      iPad and Mac models with an M1 chip or later.</p>
+    </details>
+
+    <details>
+      <summary>Where are my documents stored?</summary>
+      <p>The selected library contains document files, exact original backups,
+      complete plaintext OCR sidecars, temporary processing/deletion staging,
+      and checksum-protected recovery records. If you choose a File Provider
+      folder, that provider may upload and synchronize those files under its own
+      privacy, retention, Recently Deleted, and versioning rules. The developer
+      operates no backend and receives none of this content.</p>
+      <p>Device-local data remains inside the private app container. The live app
+      and FTS/search databases, chunks and embeddings, thumbnails, conflict copies,
+      and database snapshots reside in Application Support; downloaded model
+      artifacts reside in Caches; and preferences/settings reside in
+      UserDefaults/Preferences.</p>
+    </details>
+
+    <details>
+      <summary>How does the AI classification work?</summary>
+      <p>ArchiveSorter runs two native MLX models in sequence. OvisOCR2 transcribes
+      every complete page, then unloads before Qwen3.5 4B processes the complete
+      text for classification and Ask. Apple Foundation Models may be used
+      locally only where the feature and context permit it. Both model downloads
+      start only after your action; the app sends no document content to Hugging
+      Face.</p>
+    </details>
+
+    <details>
+      <summary>Can I change how a document was classified?</summary>
+      <p>Yes. Documents that the app is unsure about are placed in the
+      Review tab for your manual decision. You can also move any document
+      to a different category folder at any time using the app or the
+      Files app.</p>
+    </details>
+
+    <details>
+      <summary>Does the app work offline?</summary>
+      <p>After both native models and the required document files are available
+      locally, OCR and AI inference work without a remote inference server. An
+      internet connection is required for model downloads and for a File Provider
+      to synchronize or materialize online-only files.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete a document permanently?</summary>
+      <p>Soft Delete moves a document to the app's trash and retains metadata and
+      search state for restoration. Permanent Delete removes the app-managed
+      document, matching original backup, OCR sidecar, and local database
+      projection. Matching device-local thumbnail cache cleanup is best effort;
+      a cache I/O failure does not weaken the committed removal of core bytes and
+      projection. Recovery history, transaction journals, and a deletion
+      tombstone remain in the selected library so another device does not restore
+      the document. A File Provider may retain its own copies under its retention,
+      trash, or versioning rules.</p>
+    </details>
+
+    <details>
+      <summary>I found a bug or have a feature request</summary>
+      <p>Please send an email to
+      <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+      with a description of the issue or your idea. Screenshots or screen
+      recordings are very helpful for bug reports.</p>
+    </details>
+
+    <h2>Contact</h2>
+    <p>
+      Sebastian Schreck<br>
+      Nürtinger Straße 52<br>
+      71032 Böblingen<br>
+      Germany<br>
+      Phone: <a href="tel:+491623853102">+49 162 3853102</a><br>
+      Email: <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+    </p>
+
+    <p style="margin-top: 1.5rem;">
+      <a href="../archivesorter-privacy-v2/index.html?lang=en">Privacy Policy</a>
+    </p>
+  </div>
+
+  <!-- ==================== DEUTSCH ==================== -->
+  <div class="lang" id="lang-de">
+    <h1>Support</h1>
+    <section aria-labelledby="v2-de">
+      <h2 id="v2-de">Version 2.0 und neuer</h2>
+      <details>
+        <summary>Welche Modelle brauche ich?</summary>
+        <p>Wähle auf einem iPhone oder iPad mit mindestens 6 GB Arbeitsspeicher beim Einrichten oder unter Einstellungen → KI-Modell den Download. Apple liefert OvisOCR2 und Qwen 3.5 4B über Apple-Hosted Background Assets. Der Download umfasst rund 4 GB Modelldateien. Dabei gehen keine Dokumente, erkannten Texte oder Fragen an Apple oder den Entwickler. Anschließend arbeiten die Modelle offline. Version 2.0 verwendet keine Apple Foundation Models.</p>
+      </details>
+      <details>
+        <summary>Warum soll ich für ein Dokument selbst einen Ordner wählen?</summary>
+        <p>OvisOCR2 liest die Seitenbilder. Qwen 3.5 4B ordnet Dokumente ein und beantwortet Fragen auf deinem Gerät. Bei mehr als fünf Seiten überspringt die App das Lesen und Einordnen durch die KI, auch mit einem externen Server. Wähle den Zielordner unter „Prüfen“.</p>
+      </details>
+      <details>
+        <summary>Kann mein eigener Rechner die Verarbeitung übernehmen?</summary>
+        <p>Unter Einstellungen → KI-Modell kannst du einen eigenen Modellserver in deinem lokalen Netz verbinden. Sobald du die Verbindung bestätigst, erhält dieser Server die für die Verarbeitung benötigten Seitenbilder, erkannten Texte und Fragen. Das ist auch auf Geräten mit weniger als 6 GB Arbeitsspeicher möglich.</p>
+      </details>
+      <details>
+        <summary>Wo liegen meine Bibliothek und meine Backups?</summary>
+        <p>Wähle einen Geräteordner, wenn die Bibliothek lokal bleiben soll. Wählst du in der Dateien-App einen Cloud-Ordner, speichert und synchronisiert dessen Dateianbieter die Bibliothek. Auch für ein Backup kannst du einen Cloud-Ordner wählen. Ein Backup der Bibliothek erstellst du in den Einstellungen unter „Backup &amp; Wiederherstellung“.</p>
+      </details>
+      <details>
+        <summary>Du brauchst Hilfe?</summary>
+        <p>Schreibe an <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>. Nenne App-Version, Gerätemodell und den Schritt, bei dem du Hilfe brauchst. Lass vertrauliche Dokumentinhalte aus der Nachricht heraus.</p>
+      </details>
+    </section>
+
+    <h2 id="v1-de">Version 1.0</h2>
+    <div class="meta">ArchiveSorter &middot; Dokumentenverwaltung f&uuml;r iPhone &amp; iPad &middot; Aktualisiert am 26. August 2026</div>
+
+    <div class="highlight">
+      Hilfe ben&ouml;tigt? Senden Sie eine E-Mail an
+      <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+      und Sie erhalten so schnell wie m&ouml;glich eine Antwort.
+    </div>
+
+    <h2>H&auml;ufig gestellte Fragen</h2>
+
+    <details>
+      <summary>Wie fange ich an?</summary>
+      <p>Nach der Installation f&uuml;hrt Sie der Einrichtungsassistent durch
+      die Auswahl eines Ordners als Dokumentenbibliothek. Dies kann ein
+      lokaler Ordner oder ein cloud-synchronisierter Ordner sein
+      (iCloud Drive, Dropbox usw.). Nach der Einrichtung k&ouml;nnen Sie
+      Dokumente scannen oder importieren und die App klassifiziert und
+      archiviert sie automatisch.</p>
+    </details>
+
+    <details>
+      <summary>Welche Ger&auml;te werden unterst&uuml;tzt?</summary>
+      <p>ArchiveSorter erfordert iOS/iPadOS 26.0 oder neuer sowie ein
+      Ger&auml;t mit Apple-Intelligence-Unterst&uuml;tzung. Dazu geh&ouml;ren
+      iPhone 15 Pro, iPhone 15 Pro Max und alle neueren iPhone-Modelle
+      sowie iPad- und Mac-Modelle mit M1-Chip oder neuer.</p>
+    </details>
+
+    <details>
+      <summary>Wo werden meine Dokumente gespeichert?</summary>
+      <p>Die gew&auml;hlte Bibliothek enth&auml;lt Dokumentdateien, exakte
+      Original-Backups, vollst&auml;ndige Klartext-OCR-Sidecars, zeitweise
+      Verarbeitungs-/L&ouml;sch-Staging-Dateien und checksum-gesch&uuml;tzte
+      Wiederherstellungsdatens&auml;tze. Wenn Sie einen File-Provider-Ordner w&auml;hlen,
+      kann dieser Anbieter die Dateien nach seinen eigenen Datenschutz-,
+      Aufbewahrungs-, Papierkorb- und Versionsregeln hochladen und synchronisieren.
+      Der Entwickler betreibt kein Backend und erh&auml;lt diese Inhalte nicht.</p>
+      <p>Ger&auml;telokale Daten bleiben im privaten App-Container. Die laufende App-
+      und FTS-/Suchdatenbank, Chunks und Embeddings, Vorschaubilder,
+      Konfliktkopien und Datenbank-Snapshots liegen in Application Support;
+      heruntergeladene Modellartefakte liegen in Caches; Einstellungen liegen in
+      UserDefaults/Preferences.</p>
+    </details>
+
+    <details>
+      <summary>Wie funktioniert die KI-Klassifizierung?</summary>
+      <p>ArchiveSorter f&uuml;hrt zwei native MLX-Modelle nacheinander aus. OvisOCR2
+      transkribiert jede Seite vollst&auml;ndig und wird danach entladen, bevor
+      Qwen3.5 4B den vollst&auml;ndigen Text f&uuml;r Klassifizierung und Ask verarbeitet.
+      Apple Foundation Models kann nur dort lokal verwendet werden, wo Funktion
+      und Kontext dies erlauben. Beide Modelldownloads starten erst nach Ihrer
+      Aktion; Dokumentinhalte sendet die App nicht an Hugging Face.</p>
+    </details>
+
+    <details>
+      <summary>Kann ich die Klassifizierung eines Dokuments &auml;ndern?</summary>
+      <p>Ja. Dokumente, bei denen die App unsicher ist, werden im
+      &Uuml;berpr&uuml;fungs-Tab zur manuellen Entscheidung abgelegt. Sie k&ouml;nnen
+      jedes Dokument jederzeit &uuml;ber die App oder die Dateien-App in
+      einen anderen Kategorieordner verschieben.</p>
+    </details>
+
+    <details>
+      <summary>Funktioniert die App offline?</summary>
+      <p>Sobald beide nativen Modelle und die ben&ouml;tigten Dokumentdateien lokal
+      verf&uuml;gbar sind, funktionieren OCR und KI-Inferenz ohne entfernten
+      Inferenzserver. Eine Internetverbindung ist f&uuml;r Modelldownloads sowie zum
+      Synchronisieren oder Materialisieren von Online-Dateien durch einen File
+      Provider erforderlich.</p>
+    </details>
+
+    <details>
+      <summary>Wie l&ouml;sche ich ein Dokument dauerhaft?</summary>
+      <p>Weiches L&ouml;schen verschiebt ein Dokument in den App-Papierkorb und
+      beh&auml;lt Metadaten und Suchstatus f&uuml;r eine Wiederherstellung. Dauerhaftes
+      L&ouml;schen entfernt das von der App verwaltete Dokument, das passende
+      Original-Backup, das OCR-Sidecar sowie die lokale Datenbankprojektion. Die
+      Bereinigung passender ger&auml;telokaler Vorschaubild-Cacheeintr&auml;ge erfolgt nach
+      bestem Bem&uuml;hen; ein Cache-I/O-Fehler schw&auml;cht die best&auml;tigte L&ouml;schung der
+      Kerndaten und Projektion nicht. Wiederherstellungshistorie,
+      Transaktionsjournale und ein L&ouml;sch-Tombstone bleiben in der gew&auml;hlten
+      Bibliothek, damit ein anderes Ger&auml;t das Dokument nicht wiederherstellt. Ein
+      File Provider kann eigene Kopien nach seinen Aufbewahrungs-, Papierkorb-
+      oder Versionsregeln behalten.</p>
+    </details>
+
+    <details>
+      <summary>Ich habe einen Fehler gefunden oder eine Funktionsanfrage</summary>
+      <p>Bitte senden Sie eine E-Mail an
+      <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+      mit einer Beschreibung des Problems oder Ihrer Idee. Screenshots
+      oder Bildschirmaufnahmen sind bei Fehlerberichten sehr hilfreich.</p>
+    </details>
+
+    <h2>Kontakt</h2>
+    <p>
+      Sebastian Schreck<br>
+      Nürtinger Straße 52<br>
+      71032 Böblingen<br>
+      Deutschland<br>
+      Telefon: <a href="tel:+491623853102">+49 162 3853102</a><br>
+      E-Mail: <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+    </p>
+
+    <p style="margin-top: 1.5rem;">
+      <a href="../archivesorter-privacy-v2/index.html?lang=de">Datenschutzerkl&auml;rung</a>
+    </p>
+  </div>
+
+  <!-- ==================== FRANCAIS ==================== -->
+  <div class="lang" id="lang-fr">
+    <h1>Assistance</h1>
+    <section aria-labelledby="v2-fr">
+      <h2 id="v2-fr">Version 2.0 et versions ultérieures</h2>
+      <details>
+        <summary>Quels modèles dois-je télécharger ?</summary>
+        <p>Sur un iPhone ou un iPad doté d’au moins 6 Go de mémoire vive, lancez le téléchargement lors de la configuration ou depuis les réglages du modèle d’IA. Apple distribue OvisOCR2 et Qwen 3.5 4B via Apple-Hosted Background Assets. Le téléchargement représente environ 4 Go de fichiers de modèles. Il n’envoie ni documents, ni texte reconnu, ni questions à Apple ou au développeur. Les modèles fonctionnent ensuite hors ligne. La version 2.0 n’utilise pas Apple Foundation Models.</p>
+      </details>
+      <details>
+        <summary>Pourquoi dois-je choisir moi-même le dossier d’un document ?</summary>
+        <p>OvisOCR2 lit les images des pages. Sur votre appareil, Qwen 3.5 4B classe les documents et répond aux questions. Au-delà de cinq pages, l’IA ne lit ni ne classe le document, même si vous utilisez votre propre serveur. Choisissez le dossier lors de la vérification.</p>
+      </details>
+      <details>
+        <summary>Puis-je utiliser mon ordinateur pour le traitement ?</summary>
+        <p>Dans les réglages du modèle d’IA, vous pouvez connecter votre propre serveur de modèles sur votre réseau local. Une fois la connexion confirmée, ce serveur reçoit les images des pages, le texte reconnu et les questions nécessaires au traitement. Cette solution est également disponible sur les appareils dotés de moins de 6 Go de mémoire vive.</p>
+      </details>
+      <details>
+        <summary>Où sont conservées ma bibliothèque et mes sauvegardes ?</summary>
+        <p>Choisissez un dossier sur l’appareil pour conserver la bibliothèque localement. Si vous choisissez un dossier cloud dans Fichiers, votre fournisseur y stocke et synchronise la bibliothèque. Vous pouvez également choisir un dossier cloud pour une sauvegarde. Utilisez la fonction de sauvegarde et de restauration dans les réglages pour sauvegarder votre bibliothèque.</p>
+      </details>
+      <details>
+        <summary>Besoin d’aide ?</summary>
+        <p>Écrivez à <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a> en indiquant la version de l’app, le modèle de l’appareil et l’étape qui pose problème. Évitez de joindre des informations confidentielles tirées de vos documents.</p>
+      </details>
+    </section>
+
+    <h2 id="v1-fr">Version 1.0</h2>
+    <div class="meta">ArchiveSorter &middot; Gestion de documents pour iPhone &amp; iPad &middot; Mise &agrave; jour le 26 ao&ucirc;t 2026</div>
+
+    <div class="highlight">
+      Besoin d&rsquo;aide ? Envoyez un e-mail &agrave;
+      <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+      et vous recevrez une r&eacute;ponse dans les meilleurs d&eacute;lais.
+    </div>
+
+    <h2>Foire aux questions</h2>
+
+    <details>
+      <summary>Comment d&eacute;marrer ?</summary>
+      <p>Apr&egrave;s l&rsquo;installation, l&rsquo;assistant de configuration vous guidera
+      pour s&eacute;lectionner un dossier comme biblioth&egrave;que de documents.
+      Il peut s&rsquo;agir d&rsquo;un dossier local ou d&rsquo;un dossier synchronis&eacute;
+      dans le cloud (iCloud Drive, Dropbox, etc.). Une fois configur&eacute;,
+      vous pouvez num&eacute;riser ou importer des documents et l&rsquo;application
+      les classera et les archivera automatiquement.</p>
+    </details>
+
+    <details>
+      <summary>Quels appareils sont pris en charge ?</summary>
+      <p>ArchiveSorter n&eacute;cessite iOS/iPadOS 26.0 ou ult&eacute;rieur et un
+      appareil compatible avec Apple Intelligence. Cela inclut
+      l&rsquo;iPhone 15 Pro, l&rsquo;iPhone 15 Pro Max et tous les mod&egrave;les
+      d&rsquo;iPhone ult&eacute;rieurs, ainsi que les mod&egrave;les d&rsquo;iPad et de Mac
+      &eacute;quip&eacute;s d&rsquo;une puce M1 ou ult&eacute;rieure.</p>
+    </details>
+
+    <details>
+      <summary>O&ugrave; sont stock&eacute;s mes documents ?</summary>
+      <p>La biblioth&egrave;que choisie contient les fichiers de documents, les
+      sauvegardes originales exactes, les fichiers annexes OCR complets en clair,
+      des fichiers temporaires de traitement/pr&eacute;paration de suppression et des
+      enregistrements de r&eacute;cup&eacute;ration prot&eacute;g&eacute;s par somme de contr&ocirc;le. Si vous
+      choisissez le dossier d'un fournisseur de fichiers, celui-ci peut
+      t&eacute;l&eacute;verser et synchroniser ces fichiers selon ses propres r&egrave;gles de
+      confidentialit&eacute;, conservation, corbeille et versions. Le d&eacute;veloppeur
+      n'exploite aucun backend et ne re&ccedil;oit pas ce contenu.</p>
+      <p>Les donn&eacute;es locales restent dans le conteneur priv&eacute; de l'app. La base
+      active de l'app, la base FTS/de recherche, les segments et embeddings, les
+      vignettes, les copies de conflits et les instantan&eacute;s de base r&eacute;sident dans
+      Application Support&nbsp;; les artefacts de mod&egrave;les t&eacute;l&eacute;charg&eacute;s r&eacute;sident dans
+      Caches&nbsp;; les pr&eacute;f&eacute;rences et r&eacute;glages r&eacute;sident dans
+      UserDefaults/Preferences.</p>
+    </details>
+
+    <details>
+      <summary>Comment fonctionne la classification par IA ?</summary>
+      <p>ArchiveSorter ex&eacute;cute deux mod&egrave;les MLX natifs successivement. OvisOCR2
+      transcrit chaque page int&eacute;gralement, puis est d&eacute;charg&eacute; avant que Qwen3.5 4B
+      traite le texte complet pour le classement et Ask. Apple Foundation Models
+      peut &ecirc;tre utilis&eacute; localement uniquement lorsque la fonction et le contexte
+      le permettent. Les deux t&eacute;l&eacute;chargements ne commencent qu'apr&egrave;s votre action&nbsp;;
+      l'app n'envoie aucun contenu documentaire &agrave; Hugging Face.</p>
+    </details>
+
+    <details>
+      <summary>Puis-je modifier la classification d&rsquo;un document ?</summary>
+      <p>Oui. Les documents dont l&rsquo;application n&rsquo;est pas s&ucirc;re sont
+      plac&eacute;s dans l&rsquo;onglet R&eacute;vision pour votre d&eacute;cision manuelle.
+      Vous pouvez &eacute;galement d&eacute;placer n&rsquo;importe quel document vers un
+      autre dossier de cat&eacute;gorie &agrave; tout moment via l&rsquo;application ou
+      l&rsquo;application Fichiers.</p>
+    </details>
+
+    <details>
+      <summary>L&rsquo;application fonctionne-t-elle hors ligne ?</summary>
+      <p>Une fois les deux mod&egrave;les natifs et les documents requis disponibles
+      localement, l'OCR et l'inf&eacute;rence d'IA fonctionnent sans serveur d'inf&eacute;rence
+      distant. Une connexion Internet est requise pour les t&eacute;l&eacute;chargements de
+      mod&egrave;les et pour qu'un fournisseur synchronise ou mat&eacute;rialise des fichiers
+      disponibles uniquement en ligne.</p>
+    </details>
+
+    <details>
+      <summary>Comment supprimer d&eacute;finitivement un document ?</summary>
+      <p>La suppression r&eacute;versible d&eacute;place le document dans la corbeille et
+      conserve les m&eacute;tadonn&eacute;es et l'&eacute;tat de recherche. La suppression d&eacute;finitive
+      retire le document g&eacute;r&eacute; par l'app, la sauvegarde originale correspondante,
+      le fichier annexe OCR et la projection locale de la base de donn&eacute;es. Le
+      nettoyage des entr&eacute;es correspondantes du cache local de vignettes est
+      effectu&eacute; dans la mesure du possible&nbsp;; un &eacute;chec d'E/S du cache ne remet pas
+      en cause la suppression valid&eacute;e des donn&eacute;es principales et de la
+      projection. L'historique de r&eacute;cup&eacute;ration, les journaux de transactions et
+      un marqueur de suppression restent dans la biblioth&egrave;que choisie afin qu'un
+      autre appareil ne restaure pas le document. Un fournisseur de fichiers peut
+      conserver ses propres copies selon ses r&egrave;gles de conservation, corbeille
+      ou versions.</p>
+    </details>
+
+    <details>
+      <summary>J&rsquo;ai trouv&eacute; un bug ou j&rsquo;ai une suggestion</summary>
+      <p>Veuillez envoyer un e-mail &agrave;
+      <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+      avec une description du probl&egrave;me ou de votre id&eacute;e. Les captures
+      d&rsquo;&eacute;cran ou les enregistrements d&rsquo;&eacute;cran sont tr&egrave;s utiles pour
+      les rapports de bugs.</p>
+    </details>
+
+    <h2>Contact</h2>
+    <p>
+      Sebastian Schreck<br>
+      Nürtinger Straße 52<br>
+      71032 Böblingen<br>
+      Allemagne<br>
+      T&eacute;l&eacute;phone : <a href="tel:+491623853102">+49 162 3853102</a><br>
+      E-mail : <a href="mailto:developer.schreck@icloud.com">developer.schreck@icloud.com</a>
+    </p>
+
+    <p style="margin-top: 1.5rem;">
+      <a href="../archivesorter-privacy-v2/index.html?lang=fr">Politique de confidentialit&eacute;</a>
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2026 Sebastian Schreck. All rights reserved.
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.lang-switch button').forEach(function(el) { el.classList.remove('active'); });
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+      document.documentElement.lang = lang;
+    }
+
+    const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+    if (['de', 'en', 'fr'].includes(requestedLanguage)) {
+      setLang(requestedLanguage);
+    }
+  </script>
+
+</body>
+</html>
